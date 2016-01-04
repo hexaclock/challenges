@@ -1,0 +1,12 @@
+Test cases:
+
+fast_LCS_with_values(giraffe,kangaroo)        --> ga,gr
+fast_LCS_with_values(vladislav,daniel)        --> ail,dil
+fast_LCS_with_values(a,a)                     --> a
+fast_LCS_with_values(daniel,nicholas)         --> nil
+fast_LCS_with_values(nicholas,daniel)         --> nil
+fast_LCS_with_values(barack obama,joe biden)  --> b,ob
+fast_LCS_with_values(test,case)               --> e,s
+fast_LCS_with_values(panama,anagram)          --> anaa,anam
+fast_LCS_with_values(guitar,tar)              --> tar
+fast_LCS_with_values(,)                       -->   

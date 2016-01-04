@@ -1,0 +1,61 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+
+int main() 
+{
+    unsigned int lgthin;
+    int cases;
+    int chgcnt;
+    string input;
+    string s1;
+    string s2;
+    int arr1[128];
+    int arr2[128];
+    
+    scanf("%d",&cases);
+    
+    while (cases > 0)
+        {
+            for (unsigned int i=0; i<128; ++i)
+                {
+                    arr1[i] = 0;
+                    arr2[i] = 0;
+                }
+            chgcnt = 0;
+            cin>>input;
+            lgthin = input.length();
+        
+            if (lgthin % 2 != 0)
+                cout<<"-1"<<endl;
+            else
+            {
+                /* don't forget to test this ghettoness */
+                for (unsigned int i=0; i < lgthin/2; ++i)
+                    {
+                        s1 += input[i];
+                        s2 += input[i+(lgthin/2)];
+                    }
+                /* we has the strings */
+                for (unsigned int j=0; j < lgthin/2; ++j)
+                    {
+                        arr1[s1[j]] += 1;
+                        arr2[s2[j]] += 1;
+                    }
+                for (unsigned int k=0; k < 128; ++k)
+                    {
+                        if (arr1[k] > arr2[k])
+                            ++chgcnt;
+                    }
+                cout<<chgcnt<<endl;
+             }
+      --cases;
+        }
+    return 0;
+}
+
