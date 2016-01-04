@@ -1,9 +1,3 @@
-/*
- *Daniel Vinakovsky & Vladislav Ligai
- *I pledge my honor that I have abided by the Stevens Honor System.
- *Project Euler #4 Solution
-*/
-
 public class LargestPalindromeProduct
 {
     //pre: checkrev(int checknum) takes an integer
